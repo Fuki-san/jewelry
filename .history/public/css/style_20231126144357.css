@@ -1,0 +1,75 @@
+@charset "utf-8";
+
+html{
+    font-size: 100%;
+}
+body{
+    font-family: 'Crimson Text', serif;
+    color: #2d2d2d;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color:#2d2d2d;
+}
+
+img{
+    max-width: 100%;
+    /* img親のdivのコンテンツラインと子のimgコンテンツラインの下端だけ少し隙間がある。
+    その理由は、画像の横にテキストが入力された場合にデフォルトで定まっているvertical-align baseline
+    が適応され、英文字のbaseline的に多少の文字の一部が下に出てしまうからであり、今回は文字もかかず、
+    子imgと親divの下端の隙間はいらないため、vertical-align bottomで隙間を除去する。
+    baselineとbottomの差は微小なので分かりずらいが、例えばgのbaselineはgフォントの下のクルンって
+    なっているところの途中で baselineがくるが、bottomならほんとに一番下のクルンのところでくる
+    隙間があるかどうかは親divのbackgroundcolorを設定すると分かりやすい */
+    vertical-align: buttom;
+}
+
+.container{
+    /* margin: 0 auto; */
+    max-width: 1000px;
+    padding: 0;
+}
+
+.content{
+    display: flex;
+}
+.img{
+    width: 49%;
+}
+.text{
+    width: 49%;
+}
+
+#mainvisual{
+    padding: 5% 5% 0 5%;
+}
+.site-title{
+    width: 100px;
+}
+#header{
+    display: flex;
+    align-items: center;
+    padding: 0 5%;
+}
+#header ul{
+    display: flex;
+}
+#header li{
+    margin-left: 30px;
+}
+.container{
+    padding-top: 30px;
+}
+.text{
+    padding: 30px 0;
+}
+
+
+#footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

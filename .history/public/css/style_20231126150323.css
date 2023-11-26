@@ -1,0 +1,96 @@
+@charset "utf-8";
+
+html{
+    font-size: 100%;
+}
+body{
+    font-family: 'Crimson Text', serif;
+    color: #2d2d2d;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color:#2d2d2d;
+}
+
+img{
+    max-width: 100%;
+    /* img親のdivのコンテンツラインと子のimgコンテンツラインの下端だけ少し隙間がある。
+    その理由は、画像の横にテキストが入力された場合にデフォルトで定まっているvertical-align baseline
+    が適応され、英文字のbaseline的に多少の文字の一部が下に出てしまうからであり、今回は文字もかかず、
+    子imgと親divの下端の隙間はいらないため、vertical-align bottomで隙間を除去する。
+    baselineとbottomの差は微小なので分かりずらいが、例えばgのbaselineはgフォントの下のクルンって
+    なっているところの途中で baselineがくるが、bottomならほんとに一番下のクルンのところでくる
+    隙間があるかどうかは親divのbackgroundcolorを設定すると分かりやすい */
+    vertical-align: buttom;
+}
+
+.container{
+    margin: 0 auto;
+    max-width: 1000px;
+    padding: 0 18px;
+}
+
+.site-title{
+    width: 110px;
+    line-height: 1px;
+    margin-right: 50px;
+}
+.site-title a{
+    display: block;
+}
+.section-title{
+    font-size: 1.5rem;
+    font-weight: normal;
+    margin-bottom: 4px;
+}
+
+.section-title-en{
+    display: inline-block;
+    /* スパンタグでもmarginbottom使えるようにするため */
+    margin-bottom: 25px;
+}
+
+#mainvisual{
+    margin: 4% auto 0 auto;
+    width: 90vw;
+}
+
+#header{
+    width: 90vw;
+    display: flex;
+    align-items: center;
+    padding: 32px 0;
+    margin: 0 auto 30px auto;
+}
+
+#header ul{
+    display: flex;
+}
+#header li{
+    margin-right: 30px;
+    font-size: 0.875rem;
+}
+#header li:last-child{
+    margin-right: 0;
+}
+.content{
+    display: flex;
+    align-items: center;
+    margin-bottom: 60px;
+}
+.content .img{
+    width: 50%;
+}
+.content .text{
+    width: 50%;
+    padding: 0 7%;
+}
+
+#footer {
+    display: flex;
+    justify-content: space-between;
+    
+}
